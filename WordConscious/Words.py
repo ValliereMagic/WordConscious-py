@@ -82,11 +82,11 @@ class Words:
 
             rand_index: int = randbelow(num_available_words)
 
-            rand_word: str = words_available.get_value(rand_index)
+            rand_word: str = words_available[rand_index]
 
             rand_word_length = len(rand_word)
 
-            if not pickable_words.contains(rand_word) and \
+            if not rand_word in pickable_words and \
                rand_word_length >= min_chars and rand_word_length <= max_chars:
 
                 pickable_words.add(rand_word)
@@ -114,7 +114,7 @@ class Words:
 
         for i in range(0, pickable_words.length):
 
-            current_word: str = pickable_words.get_value(i)
+            current_word: str = pickable_words[i]
 
             # Dictionary for characters mapped to their required occurances
             # in the current word being inspected.

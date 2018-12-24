@@ -30,7 +30,7 @@ class Hints:
 
         if (current_hint_index < guessable_words.length):
 
-            current_guess_word = guessable_words.get_value(current_hint_index)
+            current_guess_word = guessable_words[current_hint_index]
 
         # If the index has gone out of bounds (caused by words being guessed)
         # or the indexes have changed (can be caused by a word being guessed or
@@ -45,7 +45,7 @@ class Hints:
 
             self.chars_revealed = 0
 
-            new_guess_word: str = guessable_words.get_value(new_rand_index)
+            new_guess_word: str = guessable_words[new_rand_index]
 
             # Update the current guess word and hint_index to their new values
             current_guess_word = new_guess_word

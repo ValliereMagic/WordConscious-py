@@ -77,7 +77,7 @@ def main():
 
                 print("Word(s) Left: " + str(guessable_words.length))
 
-            elif guessable_words.contains(guess):
+            elif guess in guessable_words:
 
                 guessable_words.remove_value(guess)
 
