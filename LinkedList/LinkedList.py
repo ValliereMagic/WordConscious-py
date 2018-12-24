@@ -261,18 +261,18 @@ class List:
         current: Node = self.root
 
         if current is None:
-            return ""
+            return str()
 
-        string_to_build: str = ""
+        string_to_build: list = list()
 
         for i in range(0, self.length):
 
-            string_to_build += current.value
+            string_to_build.append(current.value)
 
             if i < self.length - 1:
 
-                string_to_build += ", "
+                string_to_build.append(", ")
 
             current = current.nextElement
 
-        return string_to_build
+        return str().join(string_to_build)

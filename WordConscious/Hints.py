@@ -11,7 +11,7 @@ class Hints:
 
         self.current_hint_index: int = 0
 
-        self.current_guess_word: str = ""
+        self.current_guess_word: str = str()
 
         self.chars_revealed: int = 0
 
@@ -58,7 +58,7 @@ class Hints:
         # build the hint string.
         current_hint_word_length: int = len(current_guess_word)
 
-        hint_string: str = ""
+        hint_string: list = list()
 
         # Build the new hint string using current_guess_word
         # Reveal one more character, than previously revealed (if applicable)
@@ -68,13 +68,13 @@ class Hints:
 
             if i <= self.chars_revealed and i < (current_hint_word_length - self.min_chars_unrevealed):
 
-                hint_string += current_guess_word[i]
+                hint_string.append(current_guess_word[i])
 
             else:
 
-                hint_string += "*"
+                hint_string.append("*")
 
         self.chars_revealed += 1
 
-        return hint_string
+        return str().join(hint_string)
         
