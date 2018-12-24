@@ -78,7 +78,9 @@ class Words:
 
         number_of_words_it: int = number_of_words
 
-        for _ in range(0, number_of_words_it):
+        i: int = 0
+
+        while i < number_of_words_it:
 
             rand_index: int = randbelow(num_available_words)
 
@@ -95,7 +97,9 @@ class Words:
                 
                 number_of_words_it += 1
 
-            if number_of_words_it > number_of_words * 2:
+            i += 1
+
+            if number_of_words_it > number_of_words * 4:
 
                 break
 
