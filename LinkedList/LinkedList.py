@@ -74,7 +74,7 @@ class List:
 
         self.length += 1
 
-    def get_value(self, index: int) -> any:
+    def __getitem__(self, index: int) -> any:
         
         """
         Retrieve the value in the node at a specified
@@ -163,7 +163,7 @@ class List:
 
             random_node.value = temp_value
 
-    def contains(self, value: any) -> bool:
+    def __contains__(self, value: any) -> bool:
 
         """
         Checks to see if the element passed is in the list.
